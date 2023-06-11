@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="./script.js" defer></script>
+  <title>Filmtastic</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav__container">
+
+    </div>
+
+  </nav>
+  <header>
+    <div class="header__container">
+
+      <h1><span class="color-highlight">
+        <i class="fa-solid fa-film"></i>
+        Filmtastic</span></h1>
+      <form class="form__character-search" onsubmit="searchCharacter(event)">
+        <div class="search-bar__wrapper">
+          <label for="character-search" class="label__character-search"></label>
+          <input type="search" name="character-search" id="character-search"
+            placeholder="Search Database...">
+          <button type="submit" class="submit__character-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+  </header>
+  <main>
+    <section>
+      <div class="section__header--container">
+        <select class="movie--filter" onchange="selectMovieFilter(event)">
+          <option value="Default" class="option__default" selected disabled>Sort by Year</option>
+          <option value="Year: High to Low" class="option__year--high-to-low">Year: High to Low</option>
+          <option value="Year: Low to High" class="option__year--low-to-high">Year: Low to High</option>
+        </select>
+        
+        <!-- <div class="character-list__page-navigation--container">
+          <button class="button__page--back" onclick="pageBack(event)">-</button>
+          <button class="button__page--forward" onclick="pageForward(event)">+</button>
+        </div> -->
+        <h2 class="search-results__info"></h2>
+        <div class="character-list__container">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+
+</html>
