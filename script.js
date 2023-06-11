@@ -1,7 +1,7 @@
 let searchValue = "superman";
 let searchMediaType = "movie";
 let searchPageNumber = 1;
-let apiUrl = `http://www.omdbapi.com/?i=tt3896198&apikey=e0b9ee23&s=${searchValue}&type=${searchMediaType}&page=${searchPageNumber}`;
+let apiUrl = `https://www.omdbapi.com/?i=tt3896198&apikey=e0b9ee23&s=${searchValue}&type=${searchMediaType}&page=${searchPageNumber}`;
 let charDiv = document.querySelector(".character-list__container");
 let serachInfoHtml = document.querySelector(".search-results__info");
 let charListData = [];
@@ -86,7 +86,7 @@ const searchCharacter = async e => {
   e.preventDefault();
   searchValue = e.target["character-search"].value;
   console.log(e);
-  apiUrl = `http://www.omdbapi.com/?i=tt3896198&apikey=e0b9ee23&s=${searchValue}}&type=${searchMediaType}&page=${searchPageNumber}`;
+  apiUrl = `https://www.omdbapi.com/?i=tt3896198&apikey=e0b9ee23&s=${searchValue}}&type=${searchMediaType}&page=${searchPageNumber}`;
   console.log(apiUrl);
   if (searchValue !== "") {
     console.log(searchValue);
